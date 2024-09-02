@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/ic_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_company_name"
+        android:layout_alignStart="@id/txt_company_name"
+        android:layout_marginStart="-4dp"
+        android:src="@drawable/outline_location_on_24" />
+
+    <TextView
+        android:id="@+id/txt_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:layout_toRightOf="@id/ic_location"
+        android:layout_below="@id/txt_company_name"
+        />
+
+    <RelativeLayout
+        android:id="@+id/information_box"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/outlined_box"
+        android:gravity="center"
+        android:layout_below="@id/ic_location"
+        android:layout_marginTop="25dp"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txt_information_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info_title"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            android:layout_centerHorizontal="true"/>
+
+
+        <RelativeLayout
+            android:id="@+id/info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_information_title"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/txt_contentUpd1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_contentUpd1"
+                android:textSize="12sp"
+                android:textColor="@color/grey"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/txt_contentDetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_contentDetail1"
+                android:textColor="@color/soft_orange"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_toEndOf="@id/txt_contentUpd1"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/info_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/info_1"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/txt_contentUpd2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_contentUpd2"
+                android:textSize="12sp"
+                android:textColor="@color/grey"/>
+
+            <TextView
+                android:id="@+id/txt_contentDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_contentDetail2"
+                android:textColor="@color/soft_orange"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_toRightOf="@id/txt_contentUpd2"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_katalog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/information_box"
+        android:layout_marginTop="50dp"
+        android:layout_alignStart="@id/txt_company_name"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_katalog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_manage_search_24"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_katalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/katalog"
+                android:layout_below="@id/ic_katalog"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_bookmark"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/information_box"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@id/information_box"
+        app:cardElevation="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_bookmark"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_bookmark_added_24"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bookmark"
+                android:textStyle="bold"
+                android:layout_below="@id/ic_bookmark"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_chart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/card_katalog"
+        android:layout_marginTop="50dp"
+        android:layout_alignStart="@id/txt_company_name"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_chart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_insert_chart_24"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chart"
+                android:layout_below="@id/ic_chart"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_setting"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@id/card_bookmark"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@id/information_box"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ic_setting"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/txt_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting"
+                android:textStyle="bold"
+                android:layout_below="@id/ic_setting"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
